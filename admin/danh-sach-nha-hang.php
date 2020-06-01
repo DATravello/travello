@@ -46,18 +46,20 @@
 
     <div class="table-responsive">
       <?php
-        $connection = mysqli_connect("localhost","root","","furnitureshop");
-        $query = "SELECT * FROM staff";
-        $query_run = mysqli_query($connection, $query);
+        $conn = mysqli_connect("localhost","root","","travello_db");
+        $query = "SELECT * FROM nhahang";
+        $query_run = mysqli_query($conn, $query);
       ?>
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>UserType</th>
+            <th>Mã NH</th>
+            <th>Tên Nhà Hàng</th>
+            <th>Địa Chỉ</th>
+            <th>Ảnh</th>
+            <th>SDT</th>
+            <th>Giới Thiệu</th>
+            <th>Giá Nhà Hàng</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>
@@ -71,21 +73,23 @@
               {
           ?>
                 <tr>
-                  <td><?php echo $row['id_staff']; ?></td>
-                  <td> <?php echo $row['uname_staff']; ?>  </td>
-                  <td> <?php echo $row['email_staff']; ?>  </td>
-                  <td> <?php echo $row['pword_staff']; ?>  </td>
-                  <td> <?php echo $row['type_staff']; ?>  </td>
+                  <td><?php echo $row['MaNH']; ?></td>
+                  <td> <?php echo $row['TenNhaHang']; ?>  </td>
+                  <td> <?php echo $row['DiaChi']; ?>  </td>
+                  <td> <?php echo $row['Anh']; ?>  </td>
+                  <td> <?php echo $row['SDT']; ?>  </td>
+                  <td> <?php echo $row['GioiThieuNH']; ?>  </td>
+                  <td> <?php echo $row['GiaNH']; ?>  </td>
                   <td>
-                    <form action="edit-staff.php" method="post">
-                      <input type="hidden" name="edit_id" value="<?php echo $row['id_staff']; ?>">
+                    <form action="sua-nha-hang.php" method="post">
+                      <input type="hidden" name="edit_id" value="<?php echo $row['MaNH']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_staff" value="<?php echo $row['id_staff']; ?>">
-                      <button type="submit" name="btn_delete_staff" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_nh" value="<?php echo $row['MaNH']; ?>">
+                      <button type="submit" name="btn_them_nh" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>
@@ -93,7 +97,7 @@
               }
             }
             else {
-              echo "no record found";
+              echo "không có bản ghi nào";
             }
           ?>
         

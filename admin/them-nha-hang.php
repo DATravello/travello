@@ -47,34 +47,35 @@
 
 
             <div class="form-group">
-                <label> Username </label>
-                <input type="text" name="username" class="form-control" placeholder="Enter Username">
+                <label> Tên Nhà Hàng </label>
+                <input type="text" name="TenNhaHang" class="form-control" placeholder="Nhập Tên Nhà Hàng">
             </div>
             <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                <label> Địa Chỉ </label>
+                <input type="text" name="DiaChi" class="form-control" placeholder="Nhập Địa Chỉ">
             </div>
             <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Enter Password">
+                <label> Ảnh </label>
+                <!-- <input type="file" name="images" id="images" class="form-control" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])"> -->
+                <input type="text" name="Anh" class="form-control" placeholder="Nhập Ảnh">
             </div>
             <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
+                <label> SDT </label>
+                <input type="number" name="SDT" class="form-control" placeholder="Nhập SDT">
             </div>
             <div class="form-group">
-                <label>UserType</label>
-                <select name="typestaff" class="form-control">
-                    <option value="admin">Admin</option>
-                    <option value="staff">Staff</option>
-                </select>
+                <label> Giới Thiệu </label>
+                <input type="text" name="GioiThieuNH" class="form-control" placeholder="Nhập Giới Thiệu">
             </div>
-
+            <div class="form-group">
+                <label> Giá Nhà Hàng (VNĐ) </label>
+                <input type="number" name="GiaNH" class="form-control" placeholder="Nhập Giá Nhà Hàng">
+            </div>
         </div>
 
         <div class="modal-footer">
             <button type="reset" value="reset" class="btn btn-warning" data-dismiss="modal">Xoá Trường</button>
-            <button type="submit" name="btn_add_staff" class="btn btn-primary">Lưu</button>
+            <button type="submit" name="btn_them_nh" class="btn btn-primary">Lưu</button>
         </div>
 
         </form>
