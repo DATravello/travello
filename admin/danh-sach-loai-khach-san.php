@@ -53,9 +53,9 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaLoaiKS</th>
-            <th>TenLoaiPhong</th>
-            <th>Gia</th>
+            <th>Mã Loại KS</th>
+            <th>Tên Loại Phòng</th>
+            <th>Giá</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>

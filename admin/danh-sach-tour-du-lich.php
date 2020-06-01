@@ -53,15 +53,15 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaTour</th>
-            <th>TenTour</th>
-            <th>NoiKhoiHanh</th>
-            <th>NoiDen</th>
-            <th>ThoiGian</th>
-            <th>GiaTien</th>
-            <th>HanhTrinh</th>
-            <th>SoNgay</th>
-            <th>Anh</th>
+            <th>Mã Tour</th>
+            <th>Tên Tour</th>
+            <th>Nơi Khởi Hành</th>
+            <th>Nơi Đến</th>
+            <th>Thời Gian</th>
+            <th>Giá Tiền</th>
+            <th>Hành Trình</th>
+            <th>Số Ngày</th>
+            <th>Ảnh</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>

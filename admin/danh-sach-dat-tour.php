@@ -53,17 +53,17 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaDatTour</th>
-            <th>HoTen</th>
+            <th>Mã Đặt Tour</th>
+            <th>Họ Tên</th>
             <th>CMND</th>
             <th>Email</th>
-            <th>DienThoai</th>
-            <th>DiaChi</th>
-            <th>SoNguoiLon</th>
-            <th>SoTreEm</th>
-            <th>NgayDat</th>
-            <th>ThongTinThanhToan</th>
-            <th>TongTien</th>
+            <th>Điện Thoại</th>
+            <th>Địa Chỉ</th>
+            <th>Số Người Lớn</th>
+            <th>Số Trẻ Em</th>
+            <th>Ngày Đặt</th>
+            <th>Thông Tin Thanh Toán</th>
+            <th>Tổng Tiền</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>

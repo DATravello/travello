@@ -53,12 +53,12 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaTV</th>
-            <th>TenTV</th>
-            <th>DiaChi</th>
+            <th>Mã TV</th>
+            <th>Tên TV</th>
+            <th>Địa Chỉ</th>
             <th>CMND</th>
             <th>SDT</th>
-            <th>GioiTinh</th>
+            <th>Giới tính</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>

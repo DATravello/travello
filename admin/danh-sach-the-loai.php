@@ -53,8 +53,8 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaTheLoai</th>
-            <th>TenTheLoai</th>
+            <th>Mã Thể Loại</th>
+            <th>Tên Thể Loại</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>

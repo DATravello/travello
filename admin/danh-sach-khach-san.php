@@ -53,14 +53,14 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaKS</th>
-            <th>HangSao</th>
-            <th>TenKS</th>
-            <th>DiaChi</th>
-            <th>DienThoai</th>
-            <th>SoPhong</th>
+            <th>Mã KS</th>
+            <th>Hạng Sao</th>
+            <th>Tên KS</th>
+            <th>Địa Chỉ</th>
+            <th>Điện Thoại</th>
+            <th>Số Phòng</th>
             <th>WebSite</th>
-            <th>Anh</th>
+            <th>Ảnh</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>
