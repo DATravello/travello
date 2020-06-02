@@ -77,8 +77,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <a class="collapse-item" href="list-staff.php">Danh Sách Tour</a>
-      <a class="collapse-item" href="add-staff.php">Thêm Tour</a>
+      <a class="collapse-item" href="danh-sach-tour-du-lich.php">Danh Sách Tour</a>
+      <a class="collapse-item" href="them-tour-du-lich.php">Thêm Tour</a>
     </div>
   </div>
 </li>
@@ -90,8 +90,10 @@
   </a>
   <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <a class="collapse-item" href="list-product.php">Danh Sách Phương Tiện</a>
+      <a class="collapse-item" href="danh-sach-phuong-tien.php">Danh Sách Phương Tiện</a>
+      <a class="collapse-item" href="danh-sach-dich-vu-di-kem.php">Danh Sách Dịch Vụ Đi Kèm</a>
       <a class="collapse-item" href="add-product.php">Thêm Phương Tiện</a>
+      <a class="collapse-item" href="them-dich-vu-di-kem.php">Thêm Dịch Vụ Đi Kèm</a>
     </div>
   </div>
 </li>
@@ -105,8 +107,10 @@
   </a>
   <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <a class="collapse-item" href="list-customer.php">Danh Sách Khách Sạn</a>
-      <a class="collapse-item" href="add-customer.php">Thêm Khách Sạn</a>
+      <a class="collapse-item" href="danh-sach-khach-san.php">Danh Sách Khách Sạn</a>
+      <a class="collapse-item" href="danh-sach-loai-khach-san.php">Danh Sách Loại Khách Sạn</a>
+      <a class="collapse-item" href="them-loai-khach-san.php">Thêm Loại Khách Sạn</a>
+      <a class="collapse-item" href="them-khach-san.php">Thêm Khách Sạn</a>
     </div>
   </div>
 </li>
@@ -124,6 +128,21 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <a class="collapse-item" href="danh-sach-nha-hang.php">Danh Sách Nhà Hàng</a>
       <a class="collapse-item" href="them-nha-hang.php">Thêm Nhà Hàng</a>
+    </div>
+  </div>
+</li>
+<!-- Quản lý tin tức -->
+<li class="nav-item">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+  <i class="fa fa-users"></i>
+    <span>Quản Lý Tin Tức</span>
+  </a>
+  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      <a class="collapse-item" href="danh-sach-tin-tuc.php">Danh Sách Tin Tức</a>
+      <a class="collapse-item" href="danh-sach-the-loai.php">Danh Sách Loại Tin Tức</a>
+      <a class="collapse-item" href="them-loai-tin-tuc.php">Thêm Loại Tin Tức</a>
+      <a class="collapse-item" href="them-tin-tuc.php">Thêm Tin Tức</a>
     </div>
   </div>
 </li>
