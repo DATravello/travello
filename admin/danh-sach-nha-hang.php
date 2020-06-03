@@ -82,13 +82,13 @@
                   <td> <?php echo $row['GiaNH']; ?>  </td>
                   <td>
                     <form action="sua-nha-hang.php" method="post">
-                      <input type="hidden" name="edit_id" value="<?php echo $row['MaNH']; ?>">
+                      <input type="hidden" name="sua_mnh" value="<?php echo $row['MaNH']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="xoa_nh" value="<?php echo $row['MaNH']; ?>">
+                      <input type="hidden" name="btn_xoa_nh" value="<?php echo $row['MaNH']; ?>">
                       <button type="submit" name="btn_them_nh" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
