@@ -348,4 +348,30 @@ if(isset($_POST['btn_them_tour']))
         }
     // }
 }
+
+//sửa nhà hàng
+if(isset($_POST['btn_capnhat_nh']))
+{
+    $manh = $_POST['sua_mnh'];
+    $tennh = $_POST['sua_tennh'];
+    $diachi = $_POST['sua_diachinh'];
+    $anhnh = $_POST['sua_anhnh'];
+    $dtnh = $_POST['sua_sdtnh'];
+    $gtnh = $_POST['sua_gtnh'];
+    $gianh = $_POST['sua_gianh'];
+
+    $query = "UPDATE nhahang SET TenNhaHang='$tennh', DiaChi='$diachi', Anh='$anhnh', SDT='$dtnh', GioiThieuNH='$gtnh', GiaNh='$gianh' WHERE MaNH='$manh'";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Update Successed!";
+        header('location: danh-sach-nha-hang.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Update Failed!";
+        header('location: sua-nha-hang.php');
+    }
+}
 ?>
