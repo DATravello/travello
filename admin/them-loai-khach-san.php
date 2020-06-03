@@ -1,4 +1,5 @@
 <?php
+include('security.php');
     include('includes/header.php');
     include('includes/navbar.php');
 ?>
@@ -47,27 +48,16 @@
 
 
             <div class="form-group">
-                <label> Username </label>
+                <label> Tên Loại Phòng </label>
                 <input type="text" name="username" class="form-control" placeholder="Enter Username">
             </div>
             <div class="form-group">
-                <label>Email</label>
+                <label> </label>
                 <input type="email" name="email" class="form-control" placeholder="Enter Email">
             </div>
             <div class="form-group">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control" placeholder="Enter Password">
-            </div>
-            <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
-            </div>
-            <div class="form-group">
-                <label>UserType</label>
-                <select name="typestaff" class="form-control">
-                    <option value="admin">Admin</option>
-                    <option value="staff">Staff</option>
-                </select>
             </div>
 
         </div>

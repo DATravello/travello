@@ -173,4 +173,28 @@ if(isset($_POST['btn_them_nv']))
     // }
 }
 
+/*SỬA LOẠI KHÁCH SẠN*/
+
+if(isset($_POST['btn_update_loaiks']))
+{
+    $maloai = $_POST['sua_maloai'];
+    $tenloaiphong = $_POST['sua_tenloai'];
+    $gia = $_POST['sua_gia'];
+
+    $query = "UPDATE loaiks SET TenLoaiPhong='$tenloaiphong', Gia='$gia' WHERE MaLoaiKS='$maloai'";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Cập Nhật Thành Công!";
+        header('location: danh-sach-loai-khach-san.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Cập Nhật Thất Bại!";
+        header('location: danh-sach-loai-khach-san.php');
+    }
+}
+
+
 ?>
