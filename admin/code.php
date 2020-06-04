@@ -203,7 +203,7 @@ if(isset($_POST['btn_them_loai_tin']))
                         else
                         {
                             $_SESSION['status'] = "Thêm Thất Bại!";
-                            header('location: them-loai-khach-san.php');
+                            header('location: them-loai-tin-tuc.php');
                         }
             }
         }
@@ -492,6 +492,177 @@ if(isset($_POST['btn_capnhat_dv']))
     {
         $_SESSION['status'] = "Update Failed!";
         header('location: sua-dich-vu-di-kem.php');
+    }
+}
+// XÓA THỂ LOẠI TIN TỨC
+if(isset($_POST['btn_xoa_theloai']))
+{
+    $matheloai = $_POST['xoa_theloai'];
+
+    $query = " DELETE FROM theloai WHERE MaTheLoai='$matheloai' ";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Delete Successed!";
+        header('location: danh-sach-the-loai.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Delete Failed!";
+        header('location: danh-sach-the-loai.php');
+    }
+}
+// XÓA THỂ TIN TỨC
+if(isset($_POST['btn_xoa_tintuc']))
+{
+    $matintuc = $_POST['xoa_tintuc'];
+
+    $query = " DELETE FROM tintuc WHERE MaTinTuc='$matintuc' ";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Delete Successed!";
+        header('location: danh-sach-tin-tuc.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Delete Failed!";
+        header('location: danh-sach-tin-tuc.php');
+    }
+}
+// XÓA TOUR DU LỊCH
+if(isset($_POST['btn_xoa_tour']))
+{
+    $matour = $_POST['xoa_tour'];
+
+    $query = " DELETE FROM tourdulich WHERE MaTour ='$matour' ";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Delete Successed!";
+        header('location: danh-sach-tour-du-lich.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Delete Failed!";
+        header('location: danh-sach-tour-du-lich.php');
+    }
+}
+// XÓA NHÀ HÀNG
+if(isset($_POST['btn_xoa_nh']))
+{
+    $manh = $_POST['xoa_nhahang'];
+
+    $query = " DELETE FROM nhahang WHERE MaNH ='$manh' ";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Delete Successed!";
+        header('location: danh-sach-nha-hang.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Delete Failed!";
+        header('location: danh-sach-nha-hang.php');
+    }
+}
+// XÓA KHÁCH SẠN
+if(isset($_POST['btn_xoa_ks']))
+{
+    $maks = $_POST['xoa_khachsan'];
+
+    $query = " DELETE FROM khachsan WHERE MaKS ='$maks' ";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Delete Successed!";
+        header('location: danh-sach-khach-san.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Delete Failed!";
+        header('location: danh-sach-khach-san.php');
+    }
+}
+// XÓA LOẠI KHÁCH SẠN
+if(isset($_POST['btn_xoa_loaiks']))
+{
+    $malks = $_POST['xoa_loaikhachsan'];
+
+    $query = " DELETE FROM loaiks WHERE MaLoaiKS ='$malks' ";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Delete Successed!";
+        header('location: danh-sach-loai-khach-san.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Delete Failed!";
+        header('location: danh-sach-loai-khach-san.php');
+    }
+}
+// XÓA DỊCH VỤ ĐI KÈM
+if(isset($_POST['btn_xoa_dv']))
+{
+    $madv = $_POST['xoa_dv'];
+
+    $query = " DELETE FROM dichvudikem WHERE MaDV ='$madv' ";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Delete Successed!";
+        header('location: danh-sach-dich-vu-di-kem.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Delete Failed!";
+        header('location: danh-sach-dich-vu-di-kem.php');
+    }
+}
+// XÓA NHÂN VIÊN
+if(isset($_POST['btn_xoa_nv']))
+{
+    $manv = $_POST['xoa_nhanvien'];
+
+    $query = " DELETE FROM nhanvien WHERE MaNV ='$manv' ";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Delete Successed!";
+        header('location: danh-sach-nhan-vien.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Delete Failed!";
+        header('location: danh-sach-nhan-vien.php');
+    }
+}
+// XÓA HƯỚNG DẪN VIÊN
+if(isset($_POST['btn_xoa_hdv']))
+{
+    $mahdv = $_POST['xoa_huongdanvien'];
+
+    $query = " DELETE FROM huongdanvien WHERE MaHDV ='$mahdv' ";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Delete Successed!";
+        header('location: danh-sach-huong-dan-vien.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Delete Failed!";
+        header('location: danh-sach-huong-dan-vien.php');
     }
 }
 ?>

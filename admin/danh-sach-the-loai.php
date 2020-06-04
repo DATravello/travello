@@ -9,7 +9,7 @@
 <div class="card shadow mb-4">
   <div class="card-header py-3">
     <h6 class="m-0 font-weight-bold text-primary">Danh Sách Loại Tin Tức
-            <a href="them-the-loai.php">
+            <a href="them-loai-tin-tuc.php">
               <button type="button" class="btn btn-primary">Thêm Thể Loại Tin Tức</button>
             </a>
     </h6>
@@ -78,8 +78,8 @@
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_theloai" value="<?php echo $row['MaTheLoai']; ?>">
-                      <button type="submit" name="btn_delete_theloai" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_theloai" value="<?php echo $row['MaTheLoai']; ?>">
+                      <button type="submit" name="btn_xoa_theloai" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>

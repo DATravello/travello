@@ -90,8 +90,8 @@
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_nhanvien" value="<?php echo $row['MaNV']; ?>">
-                      <button type="submit" name="btn_delete_nhanvien" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_nhanvien" value="<?php echo $row['MaNV']; ?>">
+                      <button type="submit" name="btn_xoa_nv" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>

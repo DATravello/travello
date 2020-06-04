@@ -92,8 +92,8 @@
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_tourdulich" value="<?php echo $row['MaTour']; ?>">
-                      <button type="submit" name="btn_delete_tourdulich" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_tour" value="<?php echo $row['MaTour']; ?>">
+                      <button type="submit" name="btn_xoa_tour" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>

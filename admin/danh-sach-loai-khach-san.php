@@ -80,8 +80,8 @@
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_loaiks" value="<?php echo $row['MaLoaiKS']; ?>">
-                      <button type="submit" name="btn_delete_loai" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_loaikhachsan" value="<?php echo $row['MaLoaiKS']; ?>">
+                      <button type="submit" name="btn_xoa_loaiks" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>
