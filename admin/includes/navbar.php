@@ -19,9 +19,8 @@
       <a href="index.php"><img src="img/admin.jpg" width="80px" height="80px" alt="avatar" style="border: 2px solid #fff;border-radius: 50%;"></a>
     </div>
     <p><?php
-    //  echo $row['fullname'] 
+     echo $_SESSION['TaiKhoan'];
     ?>
-    Username
     </p>
     <p><?php
     // echo $row['usertype']
@@ -92,8 +91,8 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <a class="collapse-item" href="danh-sach-phuong-tien.php">Danh Sách Phương Tiện</a>
       <a class="collapse-item" href="danh-sach-dich-vu-di-kem.php">Danh Sách Dịch Vụ Đi Kèm</a>
-      <a class="collapse-item" href="add-product.php">Thêm Phương Tiện</a>
       <a class="collapse-item" href="them-dich-vu-di-kem.php">Thêm Dịch Vụ Đi Kèm</a>
+      <a class="collapse-item" href="them-phuong-tien.php">Thêm Phương Tiện</a>
     </div>
   </div>
 </li>
@@ -115,16 +114,12 @@
   </div>
 </li>
 
-
-
-
-<!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">
-  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseUtilities">
   <i class="fa fa-shopping-cart"></i>
     <span>Quản Lý Nhà Hàng</span>
   </a>
-  <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <a class="collapse-item" href="danh-sach-nha-hang.php">Danh Sách Nhà Hàng</a>
       <a class="collapse-item" href="them-nha-hang.php">Thêm Nhà Hàng</a>
@@ -143,6 +138,44 @@
       <a class="collapse-item" href="danh-sach-the-loai.php">Danh Sách Loại Tin Tức</a>
       <a class="collapse-item" href="them-loai-tin-tuc.php">Thêm Loại Tin Tức</a>
       <a class="collapse-item" href="them-tin-tuc.php">Thêm Tin Tức</a>
+    </div>
+  </div>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseUtilities">
+  <i class="fa fa-shopping-cart"></i>
+    <span>Quản Lý Nhân Viên</span>
+  </a>
+  <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      <a class="collapse-item" href="danh-sach-nhan-vien.php">Danh Sách Nhân Viên</a>
+      <a class="collapse-item" href="them-nhan-vien.php">Thêm Nhân Viên</a>
+    </div>
+  </div>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseUtilities">
+  <i class="fa fa-shopping-cart"></i>
+    <span>Quản Lý HDV</span>
+  </a>
+  <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      <a class="collapse-item" href="danh-sach-huong-dan-vien.php">Danh Sách Hướng Dẫn Viên</a>
+      <a class="collapse-item" href="them-huong-dan-vien.php">Thêm Hướng Dẫn Viên</a>
+    </div>
+  </div>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseUtilities">
+  <i class="fa fa-shopping-cart"></i>
+    <span>Quản Lý Khách Hàng</span>
+  </a>
+  <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      <a class="collapse-item" href="danh-sach-khach-hang.php">Danh Sách Khách Hàng</a>
     </div>
   </div>
 </li>
@@ -217,9 +250,12 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-               <h7 style="text-transform: uppercase;color: #4E75E5;font-weight: bold">Username
-                <!-- .$_SESSION['username']. -->
-                </h7>
+                <?php
+                echo '<h7 style="text-transform: uppercase;color: #4E75E5;font-weight: bold">'
+                .$_SESSION['TaiKhoan'].
+                '</h7>'
+                ?>
+
                   
                 </span>
                 <img class="img-profile rounded-circle" src="img/admin-cus.png" width="30px" height="30px">
@@ -274,8 +310,8 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <form action="logout.php" method="POST">    
-            <button type="submit" name="logout_btn" class="btn btn-primary">Logout</button>
+          <form action="logout.php" method="GET">    
+            <button type="submit" name="logout" class="btn btn-primary">Logout</button>
           </form>
 
 

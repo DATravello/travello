@@ -7,9 +7,9 @@ include('includes/navbar.php');
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Thêm Nhà Hàng
-                <a href="danh-sach-nha-hang.php">
-                    <button type="button" class="btn btn-success">Danh Sách Nhà Hàng</button>
+            <h6 class="m-0 font-weight-bold text-primary">Thêm Nhân Viên
+                <a href="danh-sach-huong-dan-vien.php">
+                    <button type="button" class="btn btn-success">Danh Sách Nhân Viên</button>
                 </a>
             </h6>
         </div>
@@ -46,18 +46,18 @@ include('includes/navbar.php');
 
 
                 <div class="form-group">
-                    <label> Tên Nhà Hàng </label>
-                    <input type="text" name="TenNhaHang" class="form-control" placeholder="Nhập Tên Nhà Hàng">
+                    <label> Tên Nhân Viên </label>
+                    <input type="text" name="TenNV" class="form-control" placeholder="Nhập Tên Nhân Viên">
                 </div>
                 <div class="form-group">
-                    <label> Địa Chỉ </label>
-                    <input type="text" name="DiaChi" class="form-control" placeholder="Nhập Địa Chỉ">
+                    <label> Ngày Sinh </label>
+                    <input type="Date" name="NgaySinh" class="form-control" placeholder="Chọn Ngày Sinh">
                 </div>
 
                 <div class="form-group">
                     <label> Ảnh </label>
                     <!-- <input type="file" name="images" id="images" class="form-control" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])"> -->
-                    <div class="input-group">
+                    <!-- <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                         </div>
@@ -65,26 +65,32 @@ include('includes/navbar.php');
                             <input type="file" name="Anh" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                         </div>
-                    </div>
+                    </div> -->
+                    <input type="Text" name="Anh" class="form-control" placeholder="Chọn Ảnh">
+
                 </div>
                 
                 <div class="form-group">
-                    <label> SDT </label>
-                    <input type="number" name="SDT" class="form-control" placeholder="Nhập SDT">
+                    <label> Địa Chỉ </label>
+                    <input type="text" name="DiaChi" class="form-control" placeholder="Nhập Địa Chỉ">
                 </div>
                 <div class="form-group">
-                    <label> Giới Thiệu </label>
-                    <input type="text" name="GioiThieuNH" class="form-control" placeholder="Nhập Giới Thiệu">
+                    <label> Giới Tính </label>
+                    <input type="text" name="GioiTinh" class="form-control" placeholder="Nhập Giới Tính">
                 </div>
                 <div class="form-group">
-                    <label> Giá Nhà Hàng (VNĐ) </label>
-                    <input type="number" name="GiaNH" class="form-control" placeholder="Nhập Giá Nhà Hàng">
+                    <label> Số Điện Thoại </label>
+                    <input type="number" name="SDT" class="form-control" placeholder="Nhập Số Điện Thoại">
+                </div>
+                <div class="form-group">
+                    <label> Quyền </label>
+                    <input type="text" name="Quyen" class="form-control" placeholder="Nhập Quyền">
                 </div>
             </div>
 
             <div class="modal-footer">
                 <button type="reset" value="reset" class="btn btn-warning" data-dismiss="modal">Xoá Trường</button>
-                <button type="submit" name="btn_them_nh" class="btn btn-primary">Lưu</button>
+                <button type="submit" name="btn_them_nv" class="btn btn-primary">Lưu</button>
             </div>
 
         </form>

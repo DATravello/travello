@@ -1,4 +1,5 @@
 <?php
+include('security.php');
   include('includes/header.php'); 
   include('includes/navbar.php');
 ?>
@@ -73,9 +74,9 @@
                   <td> <?php echo $row['TenLoaiPhong']; ?>  </td>
                   <td> <?php echo $row['Gia']; ?>  </td>
                   <td>
-                    <form action="sua-loai-ks.php" method="post">
+                    <form action="sua-loai-khach-san.php" method="post">
                       <input type="hidden" name="edit_MaLoaiKS" value="<?php echo $row['MaLoaiKS']; ?>">
-                      <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
+                      <button type="submit" name="edit_btn_MaLoaiKS" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>
                   <td>

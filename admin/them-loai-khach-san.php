@@ -1,4 +1,5 @@
 <?php
+include('security.php');
     include('includes/header.php');
     include('includes/navbar.php');
 ?>
@@ -54,6 +55,18 @@
                 <label> Giá </label>
                 <input type="number" name="Gia" class="form-control" placeholder="Nhập Giá Loại Phòng">
             </div>
+                <label> Tên Loại Phòng </label>
+                <input type="text" name="username" class="form-control" placeholder="Enter Username">
+            </div>
+            <div class="form-group">
+                <label> </label>
+                <input type="email" name="email" class="form-control" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Enter Password">
+            </div>
+
         </div>
 
         <div class="modal-footer">

@@ -12,20 +12,20 @@
         <div class="form-container">
 
             <span class="form-heading">
-                <form action="">
+                <form action="logincode.php" method="POST">
 
                     <div class="input-group">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" required>
+                        <input type="text" name="TaiKhoan" placeholder="Tài Khoản" required>
                         <span class="bar"></span>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-key"></i>
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" name="MatKhau" placeholder="Mật Khẩu" required>
                         <span class="bar"></span>
                     </div>
                     <div class="input-group">
-                        <button>
+                        <button name="Login">
                             <i class="fas fa-sign-in-alt"></i>
                         </button>
                     </div>
