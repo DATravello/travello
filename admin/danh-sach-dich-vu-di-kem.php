@@ -56,7 +56,6 @@
             <th>Mã DV</th>
             <th>Tên DV</th>
             <th>Giá DV</th>
-            <th>Địa Chỉ</th>
             <th>Ghi Chú</th>
             <th>EDIT</th>
             <th>DELETE</th>
@@ -76,15 +75,15 @@
                   <td> <?php echo $row['GiaDichVu']; ?>  </td>
                   <td> <?php echo $row['GhiChu']; ?>  </td>
                   <td>
-                    <form action="sua-hdv.php" method="post">
-                      <input type="hidden" name="edit_MaDV" value="<?php echo $row['MaDV']; ?>">
+                    <form action="sua-dich-vu-di-kem.php" method="post">
+                      <input type="hidden" name="sua_madv" value="<?php echo $row['MaDV']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_dichvudikem" value="<?php echo $row['MaDV']; ?>">
-                      <button type="submit" name="btn_delete_dichvudikem" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="delete_loaiks" value="<?php echo $row['MaKS']; ?>">
+                      <button type="submit" name="btn_delete_loai" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>

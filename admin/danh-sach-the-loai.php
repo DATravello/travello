@@ -71,8 +71,8 @@
                   <td><?php echo $row['MaTheLoai']; ?></td>
                   <td> <?php echo $row['TenTheLoai']; ?>  </td>
                   <td>
-                    <form action="sua-the-loai.php" method="post">
-                      <input type="hidden" name="edit_MaTheLoai" value="<?php echo $row['MaTheLoai']; ?>">
+                    <form action="sua-loai-tin-tuc.php" method="post">
+                      <input type="hidden" name="sua_matl" value="<?php echo $row['MaTheLoai']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>

@@ -82,7 +82,7 @@
                   <td> <?php echo $row['TaoBoi']; ?>  </td>
                   <td>
                     <form action="sua-tin-tuc.php" method="post">
-                      <input type="hidden" name="edit_MaTinTuc" value="<?php echo $row['MaTinTuc']; ?>">
+                      <input type="hidden" name="sua_matt" value="<?php echo $row['MaTinTuc']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>
