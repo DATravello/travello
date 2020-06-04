@@ -54,14 +54,14 @@ include('security.php');
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaNV</th>
-            <th>TenNV</th>
-            <th>NgaySinh</th>
-            <th>GioiTinh</th>
-            <th>DiaChi</th>
+            <th>Mã NV</th>
+            <th>Tên NV</th>
+            <th>Ngày Sinh</th>
+            <th>Giới Tính</th>
+            <th>Địa Chỉ</th>
             <th>SDT</th>
-            <th>Anh</th>
-            <th>Quyen</th>
+            <th>Ảnh</th>
+            <th>Quyền</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>
@@ -91,8 +91,8 @@ include('security.php');
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_nhanvien" value="<?php echo $row['MaNV']; ?>">
-                      <button type="submit" name="btn_delete_nhanvien" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_nhanvien" value="<?php echo $row['MaNV']; ?>">
+                      <button type="submit" name="btn_xoa_nv" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>

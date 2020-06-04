@@ -1,5 +1,4 @@
 <?php
-include('security.php');
   include('includes/header.php'); 
   include('includes/navbar.php');
 ?>
@@ -9,9 +8,9 @@ include('security.php');
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Danh Sách Đặt Tour Du Lịch 
-            <a href="them-dat-tour.php">
-              <button type="button" class="btn btn-primary">Thêm Đặt Tour</button>
+    <h6 class="m-0 font-weight-bold text-primary">Danh Sách Dịch Vụ Đi Kèm
+            <a href="them-dich-vu-di-kem.php">
+              <button type="button" class="btn btn-primary">Thêm Dịch Vụ</button>
             </a>
     </h6>
   </div>
@@ -48,23 +47,16 @@ include('security.php');
     <div class="table-responsive">
       <?php
         $connection = mysqli_connect("localhost","root","","travello_db");
-        $query = "SELECT * FROM dattour";
+        $query = "SELECT * FROM dichvudikem";
         $query_run = mysqli_query($connection, $query);
       ?>
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>Mã Đặt Tour</th>
-            <th>Họ Tên</th>
-            <th>CMND</th>
-            <th>Email</th>
-            <th>Điện Thoại</th>
-            <th>Địa Chỉ</th>
-            <th>Số Người Lớn</th>
-            <th>Số Trẻ Em</th>
-            <th>Ngày Đặt</th>
-            <th>Thông Tin Thanh Toán</th>
-            <th>Tổng Tiền</th>
+            <th>Mã DV</th>
+            <th>Tên DV</th>
+            <th>Giá DV</th>
+            <th>Ghi Chú</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>
@@ -78,27 +70,20 @@ include('security.php');
               {
           ?>
                 <tr>
-                  <td><?php echo $row['MaDatTour']; ?></td>
-                  <td> <?php echo $row['HoTen']; ?>  </td>
-                  <td> <?php echo $row['CMND']; ?>  </td>
-                  <td> <?php echo $row['Email']; ?>  </td>
-                  <td> <?php echo $row['DienThoai']; ?>  </td>
-                  <td> <?php echo $row['DiaChi']; ?>  </td>
-                  <td> <?php echo $row['SoNguoiLon']; ?>  </td>
-                  <td> <?php echo $row['SoTreEm']; ?>  </td>
-                  <td> <?php echo $row['NgayDat']; ?>  </td>
-                  <td> <?php echo $row['ThongTinThanhToan']; ?>  </td>
-                  <td> <?php echo $row['TongTien']; ?>  </td>
+                  <td><?php echo $row['MaDV']; ?></td>
+                  <td> <?php echo $row['TenDV']; ?>  </td>
+                  <td> <?php echo $row['GiaDichVu']; ?>  </td>
+                  <td> <?php echo $row['GhiChu']; ?>  </td>
                   <td>
-                    <form action="sua-dattour.php" method="post">
-                      <input type="hidden" name="edit_MaDatTour" value="<?php echo $row['MaDatTour']; ?>">
+                    <form action="sua-dich-vu-di-kem.php" method="post">
+                      <input type="hidden" name="sua_madv" value="<?php echo $row['MaDV']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_dattout" value="<?php echo $row['MaDatTour']; ?>">
-                      <button type="submit" name="btn_delete_nhanvien" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_dv" value="<?php echo $row['MaDV']; ?>">
+                      <button type="submit" name="btn_xoa_dv" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>

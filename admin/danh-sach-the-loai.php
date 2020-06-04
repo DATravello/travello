@@ -10,7 +10,7 @@ include('security.php');
 <div class="card shadow mb-4">
   <div class="card-header py-3">
     <h6 class="m-0 font-weight-bold text-primary">Danh Sách Loại Tin Tức
-            <a href="them-the-loai.php">
+            <a href="them-loai-tin-tuc.php">
               <button type="button" class="btn btn-primary">Thêm Thể Loại Tin Tức</button>
             </a>
     </h6>
@@ -54,8 +54,8 @@ include('security.php');
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaTheLoai</th>
-            <th>TenTheLoai</th>
+            <th>Mã Thể Loại</th>
+            <th>Tên Thể Loại</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>
@@ -72,15 +72,15 @@ include('security.php');
                   <td><?php echo $row['MaTheLoai']; ?></td>
                   <td> <?php echo $row['TenTheLoai']; ?>  </td>
                   <td>
-                    <form action="sua-the-loai.php" method="post">
-                      <input type="hidden" name="edit_MaTheLoai" value="<?php echo $row['MaTheLoai']; ?>">
+                    <form action="sua-loai-tin-tuc.php" method="post">
+                      <input type="hidden" name="sua_matl" value="<?php echo $row['MaTheLoai']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_theloai" value="<?php echo $row['MaTheLoai']; ?>">
-                      <button type="submit" name="btn_delete_theloai" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_theloai" value="<?php echo $row['MaTheLoai']; ?>">
+                      <button type="submit" name="btn_xoa_theloai" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>

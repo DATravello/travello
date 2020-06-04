@@ -54,14 +54,14 @@ include('security.php');
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaKS</th>
-            <th>HangSao</th>
-            <th>TenKS</th>
-            <th>DiaChi</th>
-            <th>DienThoai</th>
-            <th>SoPhong</th>
+            <th>Mã KS</th>
+            <th>Hạng Sao</th>
+            <th>Tên KS</th>
+            <th>Địa Chỉ</th>
+            <th>Điện Thoại</th>
+            <th>Số Phòng</th>
             <th>WebSite</th>
-            <th>Anh</th>
+            <th>Ảnh</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>
@@ -84,15 +84,15 @@ include('security.php');
                   <td> <?php echo $row['WebSite']; ?>  </td>
                   <td> <?php echo $row['Anh']; ?>  </td>
                   <td>
-                    <form action="sua-ks.php" method="post">
-                      <input type="hidden" name="edit_MaKS" value="<?php echo $row['MaKS']; ?>">
+                    <form action="sua-khach-san.php" method="post">
+                      <input type="hidden" name="sua_maks" value="<?php echo $row['MaKS']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_loaiks" value="<?php echo $row['MaKS']; ?>">
-                      <button type="submit" name="btn_delete_loai" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_khachsan" value="<?php echo $row['MaKS']; ?>">
+                      <button type="submit" name="btn_xoa_ks" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>

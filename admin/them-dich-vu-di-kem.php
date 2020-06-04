@@ -1,5 +1,4 @@
 <?php
-include('security.php');
     include('includes/header.php');
     include('includes/navbar.php');
 ?>
@@ -7,9 +6,9 @@ include('security.php');
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Thêm Loại Khách Sạn
-            <a href="danh-sach-loai-khach-san.php">
-              <button type="button" class="btn btn-success">Danh Sách Loại Khác Sạn</button>
+            <h6 class="m-0 font-weight-bold text-primary">Thêm Dịch Vụ
+            <a href="danh-sach-dich-vu-di-kem.php">
+              <button type="button" class="btn btn-success">Danh Sách Dịch Vụ</button>
             </a>
             </h6>
         </div>
@@ -48,30 +47,23 @@ include('security.php');
 
 
             <div class="form-group">
-                <label> Tên Loại Khách Sạn </label>
-                <input type="text" name="TenLoaiPhong" class="form-control" placeholder="Nhập Tên Loại Phòng">
+                <label> Tên Dịch Vụ </label>
+                <input type="text" name="TenDV" class="form-control" placeholder="Nhập Tên Dịch Vụ">
             </div>
             <div class="form-group">
-                <label> Giá </label>
-                <input type="number" name="Gia" class="form-control" placeholder="Nhập Giá Loại Phòng">
-            </div>
-                <label> Tên Loại Phòng </label>
-                <input type="text" name="username" class="form-control" placeholder="Enter Username">
+                <label> Giá Dịch Vụ </label>
+                <input type="number" name="GiaDichVu" class="form-control" placeholder="Nhập Giá">
             </div>
             <div class="form-group">
-                <label> </label>
-                <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                <label> Ghi Chú </label>
+                <!-- <input type="file" name="images" id="images" class="form-control" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])"> -->
+                <input type="text" name="GhiChu" class="form-control" placeholder="Nhập Ghi Chú">
             </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Enter Password">
-            </div>
-
         </div>
 
         <div class="modal-footer">
             <button type="reset" value="reset" class="btn btn-warning" data-dismiss="modal">Xoá Trường</button>
-            <button type="submit" name="btn_them_loai_ks" class="btn btn-primary">Lưu</button>
+            <button type="submit" name="btn_them_dich_vu" class="btn btn-primary">Lưu</button>
         </div>
 
         </form>

@@ -54,15 +54,15 @@ include('security.php');
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaTour</th>
-            <th>TenTour</th>
-            <th>NoiKhoiHanh</th>
-            <th>NoiDen</th>
-            <th>ThoiGian</th>
-            <th>GiaTien</th>
-            <th>HanhTrinh</th>
-            <th>SoNgay</th>
-            <th>Anh</th>
+            <th>Mã Tour</th>
+            <th>Tên Tour</th>
+            <th>Nơi Khởi Hành</th>
+            <th>Nơi Đến</th>
+            <th>Thời Gian</th>
+            <th>Giá Tiền</th>
+            <th>Hành Trình</th>
+            <th>Số Ngày</th>
+            <th>Ảnh</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>
@@ -86,15 +86,15 @@ include('security.php');
                   <td> <?php echo $row['SoNgay']; ?>  </td>
                   <td> <?php echo $row['Anh']; ?>  </td>
                   <td>
-                    <form action="sua-tourdulich.php" method="post">
-                      <input type="hidden" name="edit_MaTour" value="<?php echo $row['MaTour']; ?>">
+                    <form action="sua-tour-du-lich.php" method="post">
+                      <input type="hidden" name="sua_matour" value="<?php echo $row['MaTour']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>
                   <td>
                     <form action="code.php" method="post">
-                      <input type="hidden" name="delete_tourdulich" value="<?php echo $row['MaTour']; ?>">
-                      <button type="submit" name="btn_delete_tourdulich" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
+                      <input type="hidden" name="xoa_tour" value="<?php echo $row['MaTour']; ?>">
+                      <button type="submit" name="btn_xoa_tour" class="btn btn-danger"><i class="fas fa-ban"></i></button> 
                     </form>
                   </td>
                 </tr>

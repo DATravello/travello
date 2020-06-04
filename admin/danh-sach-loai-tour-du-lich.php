@@ -54,8 +54,8 @@ include('security.php');
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>MaLoaiTour</th>
-            <th>TenLoaiTour</th>
+            <th>Mã Loại Tour</th>
+            <th>Tên Loại Tour</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>
