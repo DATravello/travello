@@ -85,8 +85,8 @@
                   <td> <?php echo $row['SoNgay']; ?>  </td>
                   <td> <?php echo $row['Anh']; ?>  </td>
                   <td>
-                    <form action="sua-tourdulich.php" method="post">
-                      <input type="hidden" name="edit_MaTour" value="<?php echo $row['MaTour']; ?>">
+                    <form action="sua-tour-du-lich.php" method="post">
+                      <input type="hidden" name="sua_matour" value="<?php echo $row['MaTour']; ?>">
                       <button type="submit" name="edit_btn" class="btn btn-success"><i class="fas fa-pen-square"></i></button> 
                     </form>
                   </td>

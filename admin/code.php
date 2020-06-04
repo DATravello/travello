@@ -349,7 +349,7 @@ if(isset($_POST['btn_them_tour']))
     // }
 }
 
-//sửa nhà hàng
+//SỬA NHÀ HÀNG
 if(isset($_POST['btn_capnhat_nh']))
 {
     $manh = $_POST['sua_mnh'];
@@ -372,6 +372,126 @@ if(isset($_POST['btn_capnhat_nh']))
     {
         $_SESSION['status'] = "Update Failed!";
         header('location: sua-nha-hang.php');
+    }
+}
+//SỬA KHÁCH SẠN
+if(isset($_POST['btn_capnhat_ks']))
+{
+    $maks = $_POST['sua_maks'];
+    $tenks = $_POST['sua_tenks'];
+    $hangsao = $_POST['sua_hangsao'];
+    $diachiks = $_POST['sua_diachiks'];
+    $dtks = $_POST['sua_sdtks'];
+    $sophong = $_POST['sua_sophong'];
+    $website = $_POST['sua_web'];
+    $anhks = $_POST['sua_anhks'];
+
+    $query = "UPDATE khachsan SET TenKS='$tenks', HangSao='$hangsao', DiaChi='$diachiks', DienThoai='$dtks', SoPhong='$sophong', WebSite='$website', Anh='$anhks' WHERE MaKS='$maks'";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Update Successed!";
+        header('location: danh-sach-khach-san.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Update Failed!";
+        header('location: sua-khach-san.php');
+    }
+}
+//SỬA THỂ LOẠI TIN TỨC
+if(isset($_POST['btn_capnhat_tl']))
+{
+    $matl = $_POST['sua_matl'];
+    $tentl = $_POST['sua_tentl'];
+
+    $query = "UPDATE theloai SET TenTheLoai='$tentl' WHERE MaTheLoai='$matl'";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Update Successed!";
+        header('location: danh-sach-the-loai.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Update Failed!";
+        header('location: sua-loai-tin-tuc.php');
+    }
+}
+//SỬA TIN TỨC
+if(isset($_POST['btn_capnhat_tt']))
+{
+    $matt = $_POST['sua_matt'];
+    $tentt = $_POST['sua_tentt'];
+    $mota = $_POST['sua_mota'];
+    $chitiet = $_POST['sua_chitiet'];
+    $hinhanhtt = $_POST['sua_hinhanh'];
+    $ngay = $_POST['sua_ngay'];
+    $taoboi = $_POST['sua_tacgia'];
+
+    $query = "UPDATE tintuc SET TenTinTuc ='$tentt', MoTa ='$mota', ChiTiet ='$chitiet', HinhAnh ='$hinhanhtt', Ngay='$ngay', TaoBoi='$taoboi' WHERE MaTinTuc='$matt'";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Update Successed!";
+        header('location: danh-sach-tin-tuc.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Update Failed!";
+        header('location: sua-tin-tuc.php');
+    }
+}
+//SỬA TOUR DU LỊCH
+if(isset($_POST['btn_capnhat_tour']))
+{
+    $matour = $_POST['sua_matour'];
+    $tentour = $_POST['sua_tentour'];
+    $noikhoihanh = $_POST['sua_noikhoihanh'];
+    $noiden = $_POST['sua_noiden'];
+    $thoigian = $_POST['sua_thoigian'];
+    $giatien = $_POST['sua_giatien'];
+    $hanhtrinh = $_POST['sua_hanhtrinh'];
+    $songay = $_POST['sua_songay'];
+    $anhtour = $_POST['sua_anh'];
+
+    $query = "UPDATE tourdulich SET TenTour='$tentour', NoiKhoiHanh='$noikhoihanh', NoiDen='$noiden', ThoiGian='$thoigian', GiaTien='$giatien', HanhTrinh='$hanhtrinh', SoNgay='$songay', Anh='$anhtour' WHERE MaTour='$matour'";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Update Successed!";
+        header('location: danh-sach-tour-du-lich.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Update Failed!";
+        header('location: sua-tour-du-lich.php');
+    }
+}
+//SỬA DỊCH VỤ ĐI KÈM
+if(isset($_POST['btn_capnhat_dv']))
+{
+    $madv = $_POST['sua_madv'];
+    $tendv = $_POST['sua_tendv'];
+    $giadv = $_POST['sua_giadv'];
+    $ghichu = $_POST['sua_ghichu'];
+
+    $query = "UPDATE dichvudikem SET TenDV='$tendv', GiaDichVu='$giadv', GhiChu='$ghichu' WHERE MaDV='$madv'";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        $_SESSION['success'] = "Update Successed!";
+        header('location: danh-sach-dich-vu-di-kem.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Update Failed!";
+        header('location: sua-dich-vu-di-kem.php');
     }
 }
 ?>
